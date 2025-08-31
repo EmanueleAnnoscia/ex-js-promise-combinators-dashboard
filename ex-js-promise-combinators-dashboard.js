@@ -23,10 +23,10 @@ const getDashboardData = async (query) => {
 
 
         const getDashboardData = {
-            city: destinations ? destinations.name : null,
-            country: destinations ? destinations.country : null,
-            temperature: weathers ? weathers.temperature : null,
-            weather: weathers ? weathers.weather_description : null,
+            city: destinations ? destinations.name : null,  //EXTRA destination?.name ?? null
+            country: destinations ? destinations.country : null, //EXTRA destination?.country ?? null
+            temperature: weathers ? weathers.temperature : null, //EXTRA weathers?.weather_description ?? null
+            weather: weathers ? weathers.weather_description : null, //EXTRA airports?.name ?? null
             airport: airports ? airports.name : null
         }
 
