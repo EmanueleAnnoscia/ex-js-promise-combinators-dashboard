@@ -21,7 +21,7 @@ const getDashboardData = async (query) => {
         // prelevo il primo risultato da ogni array
         const [destinations, weathers, airports] = results.map(res => res.status === "fulfilled" && res.value.length > 0 ? res.value[0] : null )
 
-
+        //dashboard data
         const getDashboardData = {
             city: destinations ? destinations.name : null,  //EXTRA destination?.name ?? null
             country: destinations ? destinations.country : null, //EXTRA destination?.country ?? null
@@ -38,6 +38,7 @@ const getDashboardData = async (query) => {
     }
 }
 
+//stampa in console del messaggio
 (async () => {
     try {
         const data = await getDashboardData("sydney")
